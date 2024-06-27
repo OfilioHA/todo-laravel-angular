@@ -1,0 +1,27 @@
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-12">
+      <h1 class="my-0">Taks List</h1>
+      <hr class="my-4" />
+      <div class="mb-4">
+        <a class="btn btn-primary" routerLink="/create"> Add New </a>
+      </div>
+      <table class="table table-striped">
+        <thead class="table-dark">
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Title</th>
+            <th scope="col">Priority</th>
+            <th scope="col">Complete</th>
+            <th scope="col">Actions</th>
+          </tr>
+        </thead>
+        <tbody class="table-group-divider">
+          @for (task of tasks; track task;) {
+          <tr task-item [task]="task" [index]="$index"></tr>
+          }
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
